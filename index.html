@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arman Day Schedule</title>
-<link rel="manifest" href="./manifest.webmanifest?v=1">
+<link rel="manifest" href="/Arman-Day-Schedule/manifest.webmanifest?v2">
 <meta name="theme-color" content="#080a0f">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Day Schedule">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=1">
-<link rel="shortcut icon" type="image/png" href="./icon-192.png?v=1">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=1">
+<link rel="icon" type="image/png" sizes="192x192" href="/Arman-Day-Schedule/icon-192.png?v2">
+<link rel="shortcut icon" type="image/png" href="/Arman-Day-Schedule/icon-192.png?v2">
+<link rel="apple-touch-icon" sizes="180x180" href="/Arman-Day-Schedule/icon-180.png?v2">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
@@ -1089,10 +1089,14 @@ document.addEventListener('keydown', e => {
   </div>
 </div>
 
+
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch((error) => {
+    navigator.serviceWorker.register(
+      '/Arman-Day-Schedule/sw.js?v2',
+      { scope: '/Arman-Day-Schedule/' }
+    ).catch((error) => {
       console.warn('Service worker registration failed:', error);
     });
   });
