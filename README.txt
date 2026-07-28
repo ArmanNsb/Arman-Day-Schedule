@@ -1,0 +1,1 @@
+Upload all files to the same folder in your GitHub Pages repository. Then open the LIVE GitHub Pages URL, remove any old shortcut/app, hard refresh, and install again using Install app or Add to Home Screen.
